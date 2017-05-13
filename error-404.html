@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 - Not found | {{SITE_NAME}}</title>
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet" />
+  <style>
+    * {
+      margin:0;padding:0;
+      font-family:"Lato", sans-serif;
+    }
+    html, body {
+      height:100%;
+      background: #222;
+      color: #fff;
+    }
+    h1 {
+      font-size:8em;
+      letter-spacing:.1em;
+      line-height:1em;
+    }
+    p {
+      font-size:1.2em;
+      line-height:1.5em;
+      letter-spacing:.05em;
+    }
+    div {
+      z-index:99;
+      text-align:center;
+    }
+    body {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      position:relative;
+      padding:1.5em;
+      background-image:url("http://lorempixel.com/1080/768/nature/");
+      background-repeat:no-repeat;
+      background-size:cover;
+      color:#fff;
+    }
+    body:before {
+      content:"";
+      position:absolute;
+      top:0;right:0;bottom:0;left:0;
+      background:rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>404</h1>
+    <p>The requested page could not be found.<br/>Please try again in a few minutes.</p>
+  </div>
+</body>
+</html>
