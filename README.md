@@ -17,3 +17,5 @@ Définir un fichier `.htaccess` avec trois fichiers `HTML` représentant les err
   ErrorDocument 404 /apache/error/error-404.html
   ErrorDocument 500 /apache/error/error-500.html
 ```
+
+**La variable `{{SITE_NAME}}` peut et doit être modifié par le nom du site.**
