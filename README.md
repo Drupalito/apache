@@ -6,16 +6,28 @@
 * 403 - Forbidden : Le serveur refuse de délivrer la ressource ;
 * 404 - Not Found : La ressource spécifiée n'existe pas ;
 * 500 - Internal Server Error : Une erreur interne au serveur est survenue.
+* [VOir la liste exhaustive des codes HTTP](https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP)
 
 ## Installation
 
-Définir un fichier `.htaccess` avec trois fichiers `HTML` représentant les erreurs 403, 404 et 500
+1. Dans le fichier `vhost`, définir les trois fichiers `HTML` ;
+2. Le fichier index.html servira d'affichage par défault ;
+3. **La variable `{{SITE_NAME}}` peut et doit être modifié par le nom du site.**.
 
 ```bash
-  Options -Indexes
-  ErrorDocument 403 /apache/error/error-403.html
-  ErrorDocument 404 /apache/error/error-404.html
-  ErrorDocument 500 /apache/error/error-500.html
-```
 
-**La variable `{{SITE_NAME}}` peut et doit être modifié par le nom du site.**
+  <virtualhost *:80>
+    # 1.
+    DirectoryIndex home.html index.html
+
+    # 2.
+    ErrorDocument 403 /apache/error/error-403.html
+    ErrorDocument 404 /apache/error/error-404.html
+    ErrorDocument 500 /apache/error/error-500.html
+    ErrorDocument 501 /apache/error/error-500.html
+    ErrorDocument 502 /apache/error/error-500.html
+    ErrorDocument 503 /apache/error/error-500.html
+    ErrorDocument 504 /apache/error/error-500.html
+  </virtualhost>
+
+```
